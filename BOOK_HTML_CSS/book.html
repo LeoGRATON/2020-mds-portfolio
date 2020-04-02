@@ -11,7 +11,7 @@
     <div class="content">
       <div class="box menu" id="menu">
         <div class="box logo">
-          <img src="img/logo.png"/>
+          <img src="img/PORTFOLIO_logo.png"/>
         </div>
         <div class="box home">
           <ul>
@@ -39,37 +39,29 @@
         <input type="text" v-model="searchString" placeholder="Entrer les termes rechercher"/>
       </div>
       <div class="box img" id="portfolio">
-        <img src="img/game.jpg"/>
+        <img src="img/PORTFOLIO_logo-parknroad.png"/>
       </div>
-      <div class="box info">
-        <h3>Lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Vestibulum faucibus lacus nec massa ullamcorper, ut placerat metus commodo. Maecenas tristique nunc at molestie dapibus.
-          Duis consectetur, velit eget pellentesque dignissim, ipsum massa aliquam nibh, ultricies efficitur erat elit id ex.
-           Vestibulum faucibus interdum iaculis.
-         </p>
+
+      <div v-for="article in articles">
+        <div class="box info" id="creation">
+          <h3>{{article.titre}}</h3>
+          <p>{{article.description}}</p>
+        </div>
       </div>
+
       <div class="box img2">
-        <img src="img/mouse.png"/>
+        <img src="img/PORTFOLIO_logo-fictif.png"/>
       </div>
-      <div class="box info2">
-        <h3>Lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Vestibulum faucibus lacus nec massa ullamcorper, ut placerat metus commodo. Maecenas tristique nunc at molestie dapibus.
-          Duis consectetur, velit eget pellentesque dignissim, ipsum massa aliquam nibh, ultricies efficitur erat elit id ex.
-           Vestibulum faucibus interdum iaculis.
-         </p>
+      <div class="box info2" id="creation">
+        <h3></h3>
+        <p></p>
       </div>
       <div class="box img3">
-        <img src="img/phone.jpg"/>
+        <img src="img/PORTFOLIO_Stage-Vacances.png"/>
       </div>
-      <div class="box info3">
-        <h3>Lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Vestibulum faucibus lacus nec massa ullamcorper, ut placerat metus commodo. Maecenas tristique nunc at molestie dapibus.
-          Duis consectetur, velit eget pellentesque dignissim, ipsum massa aliquam nibh, ultricies efficitur erat elit id ex.
-           Vestibulum faucibus interdum iaculis.
-         </p>
+      <div class="box info3" id="creation">
+        <h3></h3>
+        <p></p>
       </div>
       <div class="box plus">
         <a href="#menu"><button type="button" name="plus">Voir plus</button></a>
@@ -88,6 +80,22 @@
         <img src="img/leo.png"/>
       </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+    <script>
+
+    var app = new Vue({
+  el: '#creation',
+  data: {
+    articles: [
+      {
+        "titre": 'LOGO PARK N ROAD',
+        "description": "Réalisation d'un logo pour le projet d'étude MY DIGITAL PROJECT.",
+      },
+  ]
+},
+})
+    </script>
 
   </body>
 </html>

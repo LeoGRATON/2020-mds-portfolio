@@ -10,7 +10,9 @@
 body{
   margin-left: 10vw;
   width: 80vw;
-  background-image: url('img/phone.jpg');
+  /*image de fond*/
+  /*background-image: url('img/phone.jpg');*/
+  background-color: #fff;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -62,9 +64,8 @@ body{
 
 }
 .logo img{
-object-fit: cover;
-width: 163px;
-height: 68px;
+width: 70px;
+height: 70px;
 }
 
 .title{
